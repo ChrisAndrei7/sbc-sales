@@ -25,11 +25,11 @@ Abaixo, fluxos principais com processo e endpoint deste microsserviço. Para mai
 
 1 - Criar o cadastro de um cliente: http://localhost:8004/clientes/create
 
-2 - Consultar pacientes cadastrados: http://localhost:8004/clientes/
+2 - Consultar clientes cadastrados: http://localhost:8004/clientes/
 
-3 - Atualizar cadastro de um paciente: http://localhost:8004/clientes/update/{id_do_cliente}
+3 - Atualizar cadastro de um cliente: http://localhost:8004/clientes/update/{id_do_cliente}
 
-4 - Deletar o cadastro de um paciente: http://localhost:8004/clientes/delete/{id_do_cliente}
+4 - Deletar o cadastro de um cliente: http://localhost:8004/clientes/delete/{id_do_cliente}
 
 # :page_with_curl: Collection
 Disponibilizamos uma collection do postman para ajudar na utilização, contendo todas as APIs deste microserviço e com os campos necessários para preenchimento, <b>localizado na pasta appClientes/Documentos com nome "sbc-clientes.postman_collection".</b>
