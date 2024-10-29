@@ -1,6 +1,6 @@
 version: '3'
 services:
-  appClientes:
+  clientesapp:
     container_name: clientes
     build:
       context: .
