@@ -1,32 +1,32 @@
 version: '3'
 services:
-  clientesapp:
-    container_name: clientes
+  salesapp:
+    container_name: sales
     build:
       context: .
       dockerfile: project/Dockerfile
     ports:
-      - "8004:8004"
+      - "8002:8002"
     environment:
       - PG_USER=postgres
       - PG_PASSWORD=postgres
       - PG_DB=postgres
       - PG_PORT=5432
-      - PG_HOST=dbClientes
+      - PG_HOST=dbSales
     depends_on:
-      - dbClientes
+      - dbSales
     networks:
       - app-network
 
-  dbClientes:
-    container_name: dbClientes
+  dbSales:
+    container_name: dbSales
     image: postgres:12
     environment:
       - POSTGRES_DB=postgres
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
     ports:
-      - "5434:5432"
+      - "5436:5432"
     networks:
       - app-network
 

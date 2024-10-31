@@ -88,8 +88,8 @@ DATABASES = {
         'USER': os.environ.get('PG_USER','postgres'),
         'PASSWORD':os.environ.get('PG_PASSWORD','postgres'),
         'NAME': os.environ.get('PG_DB','postgres'),
-        'PORT': os.environ.get('PG_PORT','5434'),
-        'HOST': os.environ.get('PG_HOST','dbClientes'), # uses the container if set, otherwise it runs locally
+        'PORT': os.environ.get('PG_PORT','5436'),
+        'HOST': os.environ.get('PG_HOST','dbSales'), # uses the container if set, otherwise it runs locally
     }
 }
 

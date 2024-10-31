@@ -1,11 +1,11 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: appClientes-variables
+  name: appSales-variables
 data:
   #env variables for the postgres component
   #POSTGRES_USER: postgres
-  #POSTGRES_DB: appClientes
+  #POSTGRES_DB: appSales
 
   #env variables for the backend component
   DJANGO_ENV: 'development'

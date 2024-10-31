@@ -14,7 +14,7 @@ RUN pip install -r requirements.txt
 COPY project .
 
 # Expose port
-EXPOSE 8004
+EXPOSE 8002
 
 # entrypoint to run the django.sh file
 ENTRYPOINT ["bash", "-e", "./django.sh"]

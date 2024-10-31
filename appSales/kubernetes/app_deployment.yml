@@ -19,8 +19,8 @@ spec:
         app: django-postgre
     spec:
       containers:
-      - name: django-appClientes
-        image: appClientes-djangoapp:latest
+      - name: django-appSales
+        image: appSales-djangoapp:latest
         imagePullPolicy: Never
         command: ["bash", "-e", "./django.sh"]
         ports:
@@ -41,17 +41,17 @@ spec:
 #        - name: PG_DB
 #          valueFrom:
 #            configMapKeyRef:
-#              name: appClientes-variables
+#              name: appSales-variables
 #              key: PG_DB
         - name: PG_HOST
           valueFrom:
             configMapKeyRef:
-              name: appClientes-variables
+              name: appSales-variables
               key: PG_HOST
         - name: DB_PORT
           valueFrom:
             configMapKeyRef:
-              name: appClientes-variables
+              name: appSales-variables
               key: DB_PORT
         resources:
           requests:
