@@ -39,6 +39,24 @@ def addSale(request):
         serializer.save()
     return Response(serializer.data)
 
+@api_view(['GET'])
+def getClientes(request):
+    # Consultando MS de clientes para obter a lista de médicos cadastrados
+    clientes_response = requests.get('http://clientes:8004/clientes')
+
+    if clientes_response.status_code != 200:
+        return Response({"erro": "Erro ao conectar com o serviço de clientes"}, status=500)
+
+    try:
+        clientes = clientes_response.json()
+    except ValueError:
+        return Response({"erro": "Erro ao processar a resposta de clientes"}, status=500)
+
+    # Filtrar médicos disponíveis
+    clientes_disponiveis = [cliente['cpf'] for cliente in clientes]
+
+    return Response({'clientes_disponiveis': clientes_disponiveis})
+
 
 @api_view(['PUT'])
 def updateSale(request, pk):
