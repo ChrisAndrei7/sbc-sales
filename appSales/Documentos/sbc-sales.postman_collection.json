@@ -1,0 +1,230 @@
+{
+	"info": {
+		"_postman_id": "a3dbcc16-2044-4cc6-86a9-a89d279f3ed9",
+		"name": "sbc-sales",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33097875",
+		"_collection_link": "https://winter-desert-869279.postman.co/workspace/My-Workspace~bf09e259-9dfb-40ec-823b-a85d2a12f07a/collection/33097875-a3dbcc16-2044-4cc6-86a9-a89d279f3ed9?action=share&source=collection_link&creator=33097875"
+	},
+	"item": [
+		{
+			"name": "Consultar vendas",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8002/sales",
+					"host": [
+						"localhost"
+					],
+					"port": "8002",
+					"path": [
+						"sales"
+					]
+				},
+				"description": "API para consultar vendas cadastradas, não é necessário informar nada no body."
+			},
+			"response": []
+		},
+		{
+			"name": "Criar vendas",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"NomeCliente\": \"Marta da Silva\",\r\n    \"cpf\": \"06743138010\",\r\n    \"placa\": \"FJF-1F29\",\r\n    \"veiculo\": \"Fusca\",\r\n    \"dataVenda\": \"11-10-2024\",\r\n    \"status\": \"Aguardando Pagamento\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8002/sales/create",
+					"host": [
+						"localhost"
+					],
+					"port": "8002",
+					"path": [
+						"sales",
+						"create"
+					]
+				},
+				"description": "API para cadastrar novas vendas, necessário informar os 6 dados abaixo:\n\n- cpf\n    \n- placa\n    \n- NomeCliente\n    \n- Veiculo\n    \n- dataVenda\n    \n- status"
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar venda",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"NomeCliente\": \"Marta da Silva\",\r\n    \"cpf\": \"06743138010\",\r\n    \"placa\": \"FJF-1F29\",\r\n    \"veiculo\": \"Fusca\",\r\n    \"dataVenda\": \"11-10-2024\",\r\n    \"status\": \"Finalizada\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8002/sales/update/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8002",
+					"path": [
+						"sales",
+						"update",
+						"1"
+					]
+				},
+				"description": "API para atualizar vendas cadastradas, necessário informar os 6 dados abaixo e o ID da venda no final do endpoint:\n\n- cpf\n    \n- placa\n    \n- NomeCliente\n    \n- Veiculo\n    \n- dataVenda\n    \n- status"
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar venda pelo ID",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8002/sales/read/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8002",
+					"path": [
+						"sales",
+						"read",
+						"1"
+					]
+				},
+				"description": "API para consultar vendas cadastradas, filtrando pelo id. Necessário informar o id no final do endpoint."
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar venda pela placa",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8002/sales/readplaca/FJF-1F29",
+					"host": [
+						"localhost"
+					],
+					"port": "8002",
+					"path": [
+						"sales",
+						"readplaca",
+						"FJF-1F29"
+					]
+				},
+				"description": "API para consultar vendas cadastradas, filtrando pela placa. Necessário informar a placa no final do endpoint."
+			},
+			"response": []
+		},
+		{
+			"name": "Consultar venda pelo CPF",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8002/sales/readcpf/06743138010",
+					"host": [
+						"localhost"
+					],
+					"port": "8002",
+					"path": [
+						"sales",
+						"readcpf",
+						"06743138010"
+					]
+				},
+				"description": "API para consultar vendas cadastradas, filtrando pelo CPF. Necessário informar o CPF no final do endpoint."
+			},
+			"response": []
+		},
+		{
+			"name": "Deletar venda",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8002/sales/delete/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8002",
+					"path": [
+						"sales",
+						"delete",
+						"1"
+					]
+				},
+				"description": "API para deletar um venda cadastrada, necessário informar o id do venda no endpoint."
+			},
+			"response": []
+		}
+	]
+}
