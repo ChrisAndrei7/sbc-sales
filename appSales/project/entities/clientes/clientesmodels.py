@@ -8,3 +8,4 @@ class Cliente(models.Model):
     placa = models.CharField(max_length=250)
     veiculo = models.CharField(max_length=250)
     dataVenda = models.CharField(max_length=250)
+    status = models.CharField(max_length=250)
