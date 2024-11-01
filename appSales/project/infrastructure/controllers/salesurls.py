@@ -7,6 +7,7 @@ urlpatterns = [
     path('read/<str:pk>', salesviews.getSale),
     path('readcpf/<str:cpf>', salesviews.getSaleCPF),
     path('readplaca/<str:placa>', salesviews.getSalePLACA),
+    path('consultaClientes', salesviews.getClientes),
     path('update/<str:pk>', salesviews.updateSale),
     path('delete/<str:pk>', salesviews.deleteSale),
 ]

@@ -39,6 +39,38 @@
 			"response": []
 		},
 		{
+			"name": "Consultar clientes vendas",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							""
+						],
+						"type": "text/javascript",
+						"packages": {}
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8002/sales/consultaClientes",
+					"host": [
+						"localhost"
+					],
+					"port": "8002",
+					"path": [
+						"sales",
+						"consultaClientes"
+					]
+				},
+				"description": "API para consultar vendas cadastradas, não é necessário informar nada no body."
+			},
+			"response": []
+		},
+		{
 			"name": "Criar vendas",
 			"request": {
 				"method": "POST",
