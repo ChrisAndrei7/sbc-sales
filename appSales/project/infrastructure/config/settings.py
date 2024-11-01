@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-e7im26dbj!(m-)^a3#z5&5d($lrk3h+&)ckuk*&gw$@pzp!g8v
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['54.196.81.55', 'ec2-54-196-81-55.compute-1.amazonaws.com', 'localhost', 'clientes']
+ALLOWED_HOSTS = ['54.196.81.55', 'ec2-54-196-81-55.compute-1.amazonaws.com', 'localhost', 'sales']
 
 
 # application definition
@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'entities.clientes',
+    'entities.sales',
     'rest_framework',
     'application',
     'entities',

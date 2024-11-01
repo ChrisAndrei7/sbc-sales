@@ -4,7 +4,7 @@ FROM python:3.7.3-stretch
 ENV PYTHONUNBUFFERED 1
 
 # Create app directory
-WORKDIR /appClientes
+WORKDIR /appSales
 
 # Install app dependencies
 COPY project/requirements.txt .

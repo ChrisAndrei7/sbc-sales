@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 
-class Cliente(models.Model):
+class Sale(models.Model):
     NomeCliente = models.CharField(max_length=250)
     cpf = models.CharField(max_length=15)
     placa = models.CharField(max_length=250)
