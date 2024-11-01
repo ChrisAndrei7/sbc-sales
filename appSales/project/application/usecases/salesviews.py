@@ -25,6 +25,12 @@ def getSaleCPF(request, cpf):
     serializer = SaleSerializer(sales, many=False)
     return Response(serializer.data)
 
+@api_view(['GET'])
+def getSalePLACA(request, placa):
+    sales = Sale.objects.get(placa=placa)
+    serializer = SaleSerializer(sales, many=False)
+    return Response(serializer.data)
+
 
 @api_view(['POST'])
 def addSale(request):
