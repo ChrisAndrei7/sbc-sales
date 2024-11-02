@@ -37,6 +37,9 @@ Disponibilizamos uma collection do postman para ajudar na utilização, contendo
 # :page_with_curl: Requisito de Negócios
 Criamos um documento abordando o requisito de Negócios, <b>localizado na pasta appSales/Documentos com nome "Requisitos de Negocios - SubCars".</b>
 
+# :bulb: Desenho da solução 
+Criamos um documento abordando o requisito de Negócios, <b>localizado na pasta appClientes/Documentos com nome "Desenho da solução.png".</b>
+
 # :test_tube: Testes
 Para executar os testes, localizados dentro da pasta "feature", deve ser processado o comando behave abaixo após aplicação estar no ar.
 <br/>
