@@ -34,6 +34,9 @@ Abaixo, fluxos principais com processo e endpoint deste microsserviço. Para mai
 # :page_with_curl: Collection
 Disponibilizamos uma collection do postman para ajudar na utilização, contendo todas as APIs deste microserviço e com os campos necessários para preenchimento, <b>localizado na pasta appSales/Documentos com nome "sbc-sales.postman_collection".</b>
 
+# :page_with_curl: Requisito de Negócios
+Criamos um documento abordando o requisito de Negócios, <b>localizado na pasta appSales/Documentos com nome "Requisitos de Negocios - SubCars".</b>
+
 # :test_tube: Testes
 Para executar os testes, localizados dentro da pasta "feature", deve ser processado o comando behave abaixo após aplicação estar no ar.
 <br/>
