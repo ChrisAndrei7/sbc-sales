@@ -31,14 +31,14 @@ Abaixo, fluxos principais com processo e endpoint deste microsserviço. Para mai
 
 4 - Deletar o cadastro de uma venda: http://localhost:8002/sales/delete/{id_da_venda}
 
+# :page_with_curl: DDD
+Criamos um documento abordando o DDD, <b>localizado na pasta appSales/Documentos com nome "DDD - SubCars.PDF".</b>
+
 # :page_with_curl: Collection
 Disponibilizamos uma collection do postman para ajudar na utilização, contendo todas as APIs deste microserviço e com os campos necessários para preenchimento, <b>localizado na pasta appSales/Documentos com nome "sbc-sales.postman_collection".</b>
 
-# :page_with_curl: Requisito de Negócios
-Criamos um documento abordando o requisito de Negócios, <b>localizado na pasta appSales/Documentos com nome "Requisitos de Negocios - SubCars".</b>
-
 # :bulb: Desenho da solução 
-Criamos um documento abordando o requisito de Negócios, <b>localizado na pasta appClientes/Documentos com nome "Desenho da solução.png".</b>
+Criamos um documento abordando o desenho da solução, <b>localizado na pasta appClientes/Documentos com nome "Desenho da solução.png".</b>
 
 # :test_tube: Testes
 Para executar os testes, localizados dentro da pasta "feature", deve ser processado o comando behave abaixo após aplicação estar no ar.
